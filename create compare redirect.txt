@@ -1,0 +1,4 @@
+find test -name "*.tmp" sandbox -exec rm -rf {} \;
+find test -name "*.html" | grep -rn "oncology" >> oncology-pages.txt
+find test -name "*.html" | grep -rn "radiology" >> radiology-pages.txt
+diff oncology radiology >> differences
